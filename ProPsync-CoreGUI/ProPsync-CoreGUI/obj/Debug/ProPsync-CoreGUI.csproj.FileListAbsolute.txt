@@ -1,1 +1,9 @@
 C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\bin\Debug\ProPsync-CoreGUI.exe.config
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\bin\Debug\ProPsync-CoreGUI.exe.config
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\bin\Debug\ProPsync-CoreGUI.exe
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\bin\Debug\ProPsync-CoreGUI.pdb
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.Form1.resources
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.Properties.Resources.resources
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.csproj.GenerateResource.Cache
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.exe
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.pdb
