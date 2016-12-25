@@ -295,7 +295,21 @@ namespace ProPsync_CoreGUI
                 proc.Start();
                 proc.WaitForExit();
                 string status = proc.StandardOutput.ReadToEnd();
-                // Check for conflict here
+                if (status.Contains("Automatic merge failed"))
+                {
+                    DialogResult dr = MessageBox.Show("Error: Library merge conflict detected.  Do you want to replace your files with the updated versions from the server?  If you choose no, the changes on the server will be overwritten with your version.  Either way, we recommend backing up before choosing either option as this could lead to data loss.", "Merge conflict detected", MessageBoxButtons.YesNo);
+                    if (dr == DialogResult.Yes)
+                    {
+                        proc.StartInfo.Arguments = @"/C cd /d " + vars.libpath + @" & git checkout --theirs -- . & git add --all & git commit -m ""Resolve merge error by taking server version.  (" + vars.fullname + @" @ " + DateTime.Now.ToString() + @")""";
+                        proc.Start();
+                        proc.WaitForExit();
+                    }else
+                    {
+                        proc.StartInfo.Arguments = @"/C cd /d " + vars.libpath + @" & git checkout --ours -- . & git add --all & git commit -m ""Resolve merge error by taking local version.  (" + vars.fullname + @" @ " + DateTime.Now.ToString() + @")""";
+                        proc.Start();
+                        proc.WaitForExit();
+                    }
+                }
             }
 
             if (vars.syncmedia == "True")
@@ -304,7 +318,22 @@ namespace ProPsync_CoreGUI
                 proc.Start();
                 proc.WaitForExit();
                 string status = proc.StandardOutput.ReadToEnd();
-                // Check for conflict here
+                if (status.Contains("Automatic merge failed"))
+                {
+                    DialogResult dr = MessageBox.Show("Error: Media merge conflict detected.  Do you want to replace your files with the updated versions from the server?  If you choose no, the changes on the server will be overwritten with your version.  Either way, we recommend backing up before choosing either option as this could lead to data loss.", "Merge conflict detected", MessageBoxButtons.YesNo);
+                    if (dr == DialogResult.Yes)
+                    {
+                        proc.StartInfo.Arguments = @"/C cd /d " + vars.syncmedia + @" & git checkout --theirs -- . & git add --all & git commit -m ""Resolve merge error by taking server version.  (" + vars.fullname + @" @ " + DateTime.Now.ToString() + @")""";
+                        proc.Start();
+                        proc.WaitForExit();
+                    }
+                    else
+                    {
+                        proc.StartInfo.Arguments = @"/C cd /d " + vars.syncmedia + @" & git checkout --ours -- . & git add --all & git commit -m ""Resolve merge error by taking local version.  (" + vars.fullname + @" @ " + DateTime.Now.ToString() + @")""";
+                        proc.Start();
+                        proc.WaitForExit();
+                    }
+                }
             }
 
             if (vars.syncpref == "True")
@@ -313,7 +342,22 @@ namespace ProPsync_CoreGUI
                 proc.Start();
                 proc.WaitForExit();
                 string status = proc.StandardOutput.ReadToEnd();
-                // Check for conflict here
+                if (status.Contains("Automatic merge failed"))
+                {
+                    DialogResult dr = MessageBox.Show("Error: Preference/playlist merge conflict detected.  Do you want to replace your files with the updated versions from the server?  If you choose no, the changes on the server will be overwritten with your version.  Either way, we recommend backing up before choosing either option as this could lead to data loss.", "Merge conflict detected", MessageBoxButtons.YesNo);
+                    if (dr == DialogResult.Yes)
+                    {
+                        proc.StartInfo.Arguments = @"/C cd /d " + vars.syncpref + @" & git checkout --theirs -- . & git add --all & git commit -m ""Resolve merge error by taking server version.  (" + vars.fullname + @" @ " + DateTime.Now.ToString() + @")""";
+                        proc.Start();
+                        proc.WaitForExit();
+                    }
+                    else
+                    {
+                        proc.StartInfo.Arguments = @"/C cd /d " + vars.syncpref + @" & git checkout --ours -- . & git add --all & git commit -m ""Resolve merge error by taking local version.  (" + vars.fullname + @" @ " + DateTime.Now.ToString() + @")""";
+                        proc.Start();
+                        proc.WaitForExit();
+                    }
+                }
             }
         }
         private void pushchanges()
@@ -348,10 +392,6 @@ namespace ProPsync_CoreGUI
                 proc.WaitForExit();
                 string status = proc.StandardOutput.ReadToEnd();
             }
-        }
-        private void resolveconflicts()
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
