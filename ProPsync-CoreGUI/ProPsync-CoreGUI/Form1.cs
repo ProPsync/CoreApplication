@@ -127,6 +127,13 @@ namespace ProPsync_CoreGUI
                 {
                     MessageBox.Show("Error getting preferences path");
                 }
+                try
+                {
+                    vars.mode = key.GetValue("mode").ToString();
+                }catch
+                {
+                    MessageBox.Show("Error getting mode");
+                }
                 
 
                 key.Close();
@@ -141,8 +148,18 @@ namespace ProPsync_CoreGUI
                     //Handle other versions here
                 }
 
-                System.Threading.Thread trd = new System.Threading.Thread(open);
-                trd.Start();
+                if (vars.mode == "auto")
+                {
+                    label1.Visible = true;
+                    button1.Visible = false;
+                    System.Threading.Thread trd = new System.Threading.Thread(open);
+                    trd.Start();
+                }else
+                {
+                    label1.Visible = false;
+                    button1.Visible = true;
+                }
+                
             }catch (Exception ex)
             { 
                 MessageBox.Show(ex.Message.ToString());
@@ -154,17 +171,49 @@ namespace ProPsync_CoreGUI
         {
             sync();
             updatestatus("Current status: Opening ProPresenter");
+
+            // Open ProP
+            
         }
 
 
         private void sync()
         {
+
+            if (button2.InvokeRequired)
+            {
+                button2.BeginInvoke((MethodInvoker)delegate () { button2.Visible = false; });
+            }
+            else
+            {
+                button2.Visible = false;
+            }
             updatestatus("Current status: Commiting any new changes");
             commitchanges();
             updatestatus("Current status: Pulling any new changes from server");
             pullchanges();
             updatestatus("Current status: Pushing current repo to server");
             pushchanges();
+            if (!(vars.mode == "auto"))
+            {
+                if (button1.InvokeRequired)
+                {
+                    button1.BeginInvoke((MethodInvoker)delegate () { button1.Visible = true; });
+                }
+                else
+                {
+                    button1.Visible = true;
+                }
+            }
+
+            if (button2.InvokeRequired)
+            {
+                button2.BeginInvoke((MethodInvoker)delegate () { button2.Visible = true; });
+            }
+            else
+            {
+                button2.Visible = true;
+            }
         }
 
         private void updatestatus(string message)
@@ -304,6 +353,20 @@ namespace ProPsync_CoreGUI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            label1.Visible = true;
+            button2.Visible = false;
+            sync();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            derp drp = new derp();
+            drp.Show();
+        }
     }
     public class vars
     {
@@ -322,5 +385,6 @@ namespace ProPsync_CoreGUI
         public static string prefpath { get; set; }
         public static string ProPdir { get; set; }
         public static string ProPexe { get; set; }
+        public static string mode { get; set; }
     }
 }

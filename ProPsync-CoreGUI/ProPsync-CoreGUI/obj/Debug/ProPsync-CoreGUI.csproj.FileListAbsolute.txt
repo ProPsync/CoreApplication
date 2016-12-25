@@ -7,3 +7,4 @@ C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\P
 C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.csproj.GenerateResource.Cache
 C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.exe
 C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.pdb
+C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.derp.resources
