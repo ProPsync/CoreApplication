@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ProPsync-CoreGUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Great Lakes Dredge and Dock")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ProPsync-CoreGUI")]
-[assembly: AssemblyCopyright("Copyright © Great Lakes Dredge and Dock 2016")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
