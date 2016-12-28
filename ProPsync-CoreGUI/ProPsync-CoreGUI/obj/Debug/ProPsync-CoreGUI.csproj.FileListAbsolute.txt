@@ -10,7 +10,6 @@ C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\P
 C:\Users\Brian\Source\Repos\ProPresenter Sync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.derp.resources
 C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\bin\Debug\ProPsync-CoreGUI.exe
 C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\bin\Debug\ProPsync-CoreGUI.pdb
-C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync-CoreGUI.csprojResolveAssemblyReference.cache
 C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.derp.resources
 C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.Form1.resources
 C:\misc\Repos\ProPsync\CoreApplication\ProPsync-CoreGUI\ProPsync-CoreGUI\obj\Debug\ProPsync_CoreGUI.Properties.Resources.resources

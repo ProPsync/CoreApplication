@@ -179,7 +179,7 @@ namespace ProPsync_CoreGUI
             proc.WaitForExit();
             updatestatus("Current status: Confirmed ProPresenter closed, starting sync");
             sync();
-            updatestatus("Current status: Sync completed.  You can now close this window if you wish.");
+            updatestatus("Current status: Sync completed.  You can now close this window.");
         }
 
 
@@ -406,6 +406,7 @@ namespace ProPsync_CoreGUI
             label1.Visible = true;
             button2.Visible = false;
             sync();
+            updatestatus("Current status: Sync completed.  You can now close this window.");
         }
 
         private void button2_Click(object sender, EventArgs e)
