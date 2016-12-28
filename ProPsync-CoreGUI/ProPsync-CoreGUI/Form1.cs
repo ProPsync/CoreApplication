@@ -172,8 +172,14 @@ namespace ProPsync_CoreGUI
             sync();
             updatestatus("Current status: Opening ProPresenter");
 
-            // Open ProP
-            
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = vars.ProPdir + vars.ProPexe;
+            proc.Start();
+            updatestatus("Current status: Waiting for ProPresenter to close");
+            proc.WaitForExit();
+            updatestatus("Current status: Confirmed ProPresenter closed, starting sync");
+            sync();
+            updatestatus("Current status: Sync completed.  You can now close this window if you wish.");
         }
 
 
