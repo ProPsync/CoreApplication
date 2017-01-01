@@ -366,15 +366,12 @@ namespace ProPsync_CoreGUI
         {
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
             proc.StartInfo.FileName = Environment.SystemDirectory + @"\cmd.exe";
-            proc.StartInfo.UseShellExecute = false;
-            proc.StartInfo.RedirectStandardOutput = true;
 
             if (vars.synclib == "True")
             {
                 proc.StartInfo.Arguments = @"/C cd /d " + vars.libpath + @" & git push origin master";
                 proc.Start();
                 proc.WaitForExit();
-                string status = proc.StandardOutput.ReadToEnd();
             }
 
             if (vars.syncmedia == "True")
@@ -382,7 +379,6 @@ namespace ProPsync_CoreGUI
                 proc.StartInfo.Arguments = @"/C cd /d " + vars.mediapath + @" & git push origin master";
                 proc.Start();
                 proc.WaitForExit();
-                string status = proc.StandardOutput.ReadToEnd();
             }
 
             if (vars.syncpref == "True")
@@ -390,7 +386,6 @@ namespace ProPsync_CoreGUI
                 proc.StartInfo.Arguments = @"/C cd /d " + vars.prefpath + @" & git push origin master";
                 proc.Start();
                 proc.WaitForExit();
-                string status = proc.StandardOutput.ReadToEnd();
             }
         }
 
