@@ -241,8 +241,6 @@ namespace ProPsync_CoreGUI
             proc.StartInfo.FileName = Environment.SystemDirectory + @"\cmd.exe";
             proc.StartInfo.UseShellExecute = false;
             proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            proc.StartInfo.CreateNoWindow = true;
 
             if (vars.synclib == "True")
             {
@@ -292,8 +290,6 @@ namespace ProPsync_CoreGUI
             proc.StartInfo.FileName = Environment.SystemDirectory + @"\cmd.exe";
             proc.StartInfo.UseShellExecute = false;
             proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            proc.StartInfo.CreateNoWindow = true;
 
             if (vars.synclib == "True")
             {
@@ -372,8 +368,6 @@ namespace ProPsync_CoreGUI
             proc.StartInfo.FileName = Environment.SystemDirectory + @"\cmd.exe";
             proc.StartInfo.UseShellExecute = false;
             proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            proc.StartInfo.CreateNoWindow = true;
 
             if (vars.synclib == "True")
             {
